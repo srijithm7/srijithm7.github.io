@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
-
 <head>
+   <!-- Related files are aspect1.css for css, aspect1.js for D3 code -->
   <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aspect 1</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.7/d3.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="styles/aspect2.css" />
+  <link rel="stylesheet" type="text/css" href="styles/aspect1.css" />
 </head>
-
 <body width="900px" height="600px">
   <h1 class="titletext">Team Performance</h1>
   <center>The performance of a specific team, both in terms of their final placing in each season, and on how they perform at specific parts of a season (such as early-season, mid-season, at the end of the regular season, or in the finals).</center>
   <table style="padding:20px"  align="center">
     <tr>
       <td>
+          <!-- This section will hidden on load and shown on mouse over event of the bar chart -->
         <div id="tooltip" class="hidden">
       			<p><strong><span id="team">Team</span></strong></p>
       			<p>Ranking: <span id="rank">100</span></p>
@@ -23,6 +23,7 @@
         </svg>
       </td>
       <td>
+          <!-- Filters provided for the user to filter the outcome by year and different part of the season -->
         <table height="500px" width="150px">
           <tr>
             <td valign=top style="font-size:14px; font-weight: bold;color:royalblue">
@@ -44,7 +45,7 @@
       </td>
     </tr>
   </table>
-
+    <!-- D3 code for chart generation -->
   <script src="javascript/aspect1.js"></script>
 
 </body>
